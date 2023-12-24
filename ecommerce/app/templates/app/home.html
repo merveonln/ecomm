@@ -1,0 +1,135 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block title %}
+Anasayfa
+{% endblock title %}
+
+{% block banner-slider %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img width=400 src="{% static 'app/images/banner/b1.jpg' %}" class="d-block w-100" alt="banner">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="banner">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="banner">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'app/images/banner/b4.jpg' %}" class="d-block w-100" alt="banner">
+        </div>
+    </div>
+</div>
+{% endblock banner-slider %}
+
+{% block information %}
+<div class="container">
+    <div class="row bg-dark text-center p-5 text-white border-bottom shadow">
+        <h1>Hikayemiz</h1>
+        <small class="fs-5">
+            Kahve Dünyası olarak, 2004 yılında İstanbul’un Eminönü semtinde açtığımız ilk mağazamızdan itibaren, müşteri odaklı yaklaşımımız,
+            Türk misafirperverliğini yansıtan güler yüzlü karşılamamız, masaya servis anlayışımız ve ikram kültürümüzle, kısa sürede önerilen bir markaya dönüşerek, kulaktan kulağa yayıldık.
+            <br><br>
+            İlk günümüzden bugüne her zaman samimi, güler yüzlü ve ikram sunmayı seven bir marka olduk. Geniş ürün yelpazemizle herkese hitap ediyoruz,
+            herkesin beğeni ve sevgisini kazanıyoruz. Ürünlerimizi kendimiz üretiyor, kalite ve lezzet garantisi veriyoruz. Kahveden çikolataya, unlu mamulden
+            dondurmaya, bini aşkın ürün çeşidimiz ve makul fiyat politikamızla, herkesin ulaşabildiği bir marka, Hepimizin Ortak Noktası olarak yolumuza devam ediyoruz.
+        </small>
+    </div>
+</div>
+{% endblock information %}
+
+{% block main-content %}
+<div class="container">
+    <h2 class="text-center mt-5">Ürünler</h2>
+    <hr>
+    <div class="row container">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+        animation-name: none;">
+            <div class="goodnesssec smbg">
+                <a href="{% url 'category' 'KH' %}">
+                    <div class="goodnessseccont text-center">
+                        <img class="img-responsive center-block"
+                            src="{% static 'app/images/product/Orta_Kavrulmus_Turk_Kahvesi_.jpg' %}" alt="">
+                        <p class="mlkpro">Orta Kavrulmuş Türk Kahvesi</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+        animation-name: none;">
+            <div class="goodnesssec curdbgpro">
+                <a href="{% url 'category' 'CK' %}">
+                    <div class="goodnessseccont text-center">
+                        <img class="img-responsive center-block" src="{% static 'app/images/product/6li_Sutlu_Kasik_Cikolata.jpg' %}"
+                            alt="">
+                        <p class="mlkpro">6'lı Sütlü Kaşık Çikolata</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+        animation-name: none;">
+            <div class="goodnesssec">
+                <a href="{% url 'category' 'AK'%}">
+                    <div class="goodnessseccont text-center">
+                        <img class="img-responsive center-block" src="{% static 'app/images/product/Filtre_Kahve_bardak.png' %}"
+                            alt="">
+                        <p class="mlkpro">Filtre Kahve Bardağı</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="row container mb-3">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+        animation-name: none;">
+            <div class="goodnesssec smbg">
+                <a href="{% url 'category' 'FL'%}">
+                    <div class="goodnessseccont text-center">
+                        <img class="img-responsive center-block"
+                            src="{% static 'app/images/product/Findik_Kremasi.jpg' %}" alt="">
+                        <p class="mlkpro">Fındık Kreması</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+        animation-name: none;">
+            <div class="goodnesssec curdbgpro">
+                <a href="{% url 'category' 'AK'%}">
+                    <div class="goodnessseccont text-center">
+                        <img class="img-responsive center-block" src="{% static 'app/images/product/Espresso_Fincani.png' %}"
+                            alt="">
+                        <p class="mlkpro">Expresso Fincanı</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+        animation-name: none;">
+            <div class="goodnesssec">
+                <a href="{% url 'category' 'CK'%}">
+                    <div class="goodnessseccont text-center">
+                        <img class="img-responsive center-block" src="{% static 'app/images/product/Bonte_Sutlu_200g.png' %}"
+                            alt="">
+                        <p class="mlkpro">Bonte Sütlü Çikolata</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+{% endblock main-content %}
